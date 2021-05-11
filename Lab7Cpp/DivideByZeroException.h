@@ -1,7 +1,7 @@
 #pragma once
 #include <stdexcept>
 
-class DivideByZeroException : public std::invalid_argument 
+class DivideByZeroException : public std::logic_error 
 {
 public:
 	DivideByZeroException(const std::string& message);

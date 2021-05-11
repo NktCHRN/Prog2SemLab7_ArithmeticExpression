@@ -32,7 +32,7 @@ namespace ArithmeticExpressionLib
             }
             else
             {
-                throw new ArgumentException($"{nameof(A)} * {nameof(B)} can`t be smaller than or equal -2. It was {A * B:F6}");
+                throw new ArithmeticException($"{nameof(A)} * {nameof(B)} can`t be smaller than or equal -2. It was {A * B:F6}");
             }
             if (C != 0)                                 // check if C (the denominator for B / C) is equal zero
             {

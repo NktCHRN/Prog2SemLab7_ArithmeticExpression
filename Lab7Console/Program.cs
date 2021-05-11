@@ -50,13 +50,7 @@ namespace Lab7CS
                         expressions[i] = new ArithmeticExpression(a, b, c);
                         Console.WriteLine($"Result {i + 1} = {expressions[i].GetResult():F6}");
                     }
-                    catch (ArgumentException exc)
-                    {
-                        Console.WriteLine(exc.Message);
-                        Console.WriteLine("Please, enter the data once more");
-                        reenter = true;
-                    }
-                    catch (DivideByZeroException exc)
+                    catch (ArithmeticException exc)
                     {
                         Console.WriteLine(exc.Message);
                         Console.WriteLine("Please, enter the data once more");

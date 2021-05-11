@@ -47,7 +47,7 @@ double ArithmeticExpression::GetResult()
     {
         std::stringstream s;
         s << "A * B can`t be smaller than or equal -2. It was " << std::fixed << (_a * _b);
-        throw std::invalid_argument(s.str());
+        throw std::logic_error(s.str());
     }
     if (_c != 0)                                 // check if C (the denominator for B / C) is equal zero
     {

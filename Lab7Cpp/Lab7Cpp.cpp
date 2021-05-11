@@ -60,13 +60,7 @@ int main()
                 expressions[i].SetC(c);
                 cout << "Result " << i + 1 << " = " << fixed << expressions[i].GetResult() << endl;
             }
-            catch (const invalid_argument& exc)
-            {
-                cerr << exc.what() << endl;
-                cout << "Please, enter the data once more" << endl;
-                reenter = true;
-            }
-            catch (const DivideByZeroException& exc)
+            catch (const logic_error& exc)
             {
                 cerr << exc.what() << endl;
                 cout << "Please, enter the data once more" << endl;
